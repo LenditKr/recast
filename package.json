@@ -1,5 +1,5 @@
 {
-  "author": "Ben Newman <bn@cs.stanford.edu>",
+  "author": "LenditKr <engineering@lendit.co.kr>",
   "name": "recast",
   "version": "0.21.6",
   "description": "JavaScript syntax tree transformer, nondestructive pretty-printer, and automatic source map generator",

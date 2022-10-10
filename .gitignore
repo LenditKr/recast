@@ -16,5 +16,6 @@
 .idea/dictionaries
 .idea/vcs.xml
 .idea/jsLibraryMappings.xml
+.idea/git_toolbox_prj.xml
 *.iml
 modules.xml
