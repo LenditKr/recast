@@ -930,7 +930,7 @@ function genericPrintNoParens(path: any, options: any, print: any) {
 
     case "StringLiteral":
         return fromString(nodeStr(n.value, options));
-    
+
     case "BooleanLiteral": // Babel 6 Literal split
     case "Literal":
       return fromString(
@@ -1310,9 +1310,7 @@ function genericPrintNoParens(path: any, options: any, print: any) {
             namedTypes.Literal.check(child) &&
             typeof child.value === "string"
           ) {
-            if (/\S/.test(child.value)) {
-              return child.value.replace(/^\s+|\s+$/g, "");
-            } else if (/\n/.test(child.value)) {
+            if (/\n/.test(child.value)) {
               return "\n";
             }
           }
