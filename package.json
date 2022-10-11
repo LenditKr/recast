@@ -1,6 +1,6 @@
 {
   "author": "LenditKr <engineering@lendit.co.kr>",
-  "name": "@lendit/recast",
+  "name": "recast-forked",
   "version": "0.21.6",
   "description": "JavaScript syntax tree transformer, nondestructive pretty-printer, and automatic source map generator",
   "keywords": [
