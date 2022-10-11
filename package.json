@@ -1,6 +1,6 @@
 {
   "author": "LenditKr <engineering@lendit.co.kr>",
-  "name": "recast-forked",
+  "name": "@lendit/recast",
   "version": "0.21.6",
   "description": "JavaScript syntax tree transformer, nondestructive pretty-printer, and automatic source map generator",
   "keywords": [
@@ -16,7 +16,10 @@
   "homepage": "https://github.com/lenditKr/recast",
   "repository": {
     "type": "git",
-    "url": "git://github.com/lenditKr/recast.git"
+    "url": "https://github.com/lenditKr/recast.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   },
   "license": "MIT",
   "main": "main.js",
