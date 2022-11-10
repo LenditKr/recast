@@ -1304,17 +1304,6 @@ function genericPrintNoParens(path: any, options: any, print: any) {
 
       const childLines = concat(
         path.map(function (childPath: any) {
-          const child = childPath.getValue();
-
-          if (
-            namedTypes.Literal.check(child) &&
-            typeof child.value === "string"
-          ) {
-            if (/\n/.test(child.value)) {
-              return "\n";
-            }
-          }
-
           return print(childPath);
         }, "children"),
       ).indentTail(options.tabWidth);
