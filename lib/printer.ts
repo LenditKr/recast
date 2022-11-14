@@ -1310,7 +1310,21 @@ function genericPrintNoParens(path: any, options: any, print: any) {
             namedTypes.Literal.check(child) &&
             typeof child.value === "string"
           ) {
-            if (/\n/.test(child.value)) {
+            if (/\S/.test(child.value)) {
+              let v = child.value
+
+              // 문자 이전에 개행이 포함되어 있다면 제거
+              if (/(^\s*\n+\s*)(\S+)/.test(v)) {
+                v = v.replace(/^\s+/g, "");
+              }
+
+              // 문자 이후에 개행이 포함되어 있다면 제거
+              if(/(\S+)(\s*\n+\s*$)/.test(v)) {
+                v = v.replace(/\s+$/g, "");
+              }
+
+              return v
+            } else if (/\n/.test(child.value)) {
               return "\n";
             }
           }
